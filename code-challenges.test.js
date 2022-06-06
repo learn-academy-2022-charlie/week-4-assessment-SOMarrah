@@ -190,7 +190,7 @@ const dupeBad = (array, array2, ...array3) => {
     //return the new array
     return noDupe
 }
-//Hope I did the stretch challenge correctly!
+//Hope I did the stretch challenge correctly! I was thinking something like this: (array, array2, ...array3).sort((b,a)=>b-a) would be possible but was unable to figure out how to do it.
 //Got Green
 // PASS  ./code-challenges.test.js
 //   shufflin

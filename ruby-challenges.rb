@@ -19,10 +19,13 @@ num3 = 221
     # if number % 2 == 0
     #else number is odd
 def int_only(number)
+    # conditional that checks to see if the value is an integer
     if number.is_a?(Integer) == false
         "#{number} is not an accepted data type. Please enter a number."
+        # conditional to see if a number is even
     elsif number % 2 == 0
         "#{number} is even"
+        # if it is not even it is odd
     else
         "#{number} is odd"
     end
@@ -35,13 +38,16 @@ p int_only('6') # output --> "6 is not an accepted data type. Please enter a num
 
 
 
-
+# refactor of above using tenery operator
 def int_only2(number)
-    if number.is_a?(Integer)
-    number % 2 == 0 ? "#{number} is even" : "#{number} is odd"
-    else
-        "Please enter a valid number."
-    end
+    # use a conditional to check if the input is an integer
+    # if number.is_a?(Integer)
+        # ternery operator check if the value is even or odd -- Can there be nested ternary operators?
+                number.is_a?(Integer)? (number % 2 == 0 ? "#{number} is even" : "#{number} is odd") : "Please enter a valid number." #cant believe that worked
+    # number % 2 == 0 ? "#{number} is even" : "#{number} is odd"
+    # else
+    #     "Please enter a valid number."
+    # end
 end
 
 p int_only2(num1) # output --> "7 is odd"
